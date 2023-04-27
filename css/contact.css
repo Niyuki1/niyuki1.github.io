@@ -1,0 +1,332 @@
+/* 把所有标签内外边距清零 */
+* {
+    margin: 0;
+    padding: 0
+}
+/* 斜体的文字不倾斜 */
+em,
+i {
+    font-style: normal
+}
+/* 去掉li小圆点 */
+li {
+    list-style: none
+}
+img {
+    /* border: 0照顾低版本浏览器，如果图片外面包含了链接会有边框问题     */
+    border: 0;
+    /* 取消图片底侧有空白间隙的问题 */
+    vertical-align: middle
+}
+html{
+    font-size: 16px;
+}
+body {
+    /* 抗锯齿 */
+    -webkit-font-smoothing: antialiased;
+    background-color: #eeeeee;
+    margin: 0 auto;
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+/* 清除浮动 */
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0
+}
+.clearfix {
+    *zoom: 1
+}
+@font-face {
+    font-family: 'Alimama';
+    src: url('../font/AlimamaShuHeiTi-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Regular';
+    src: url('../font/cb3W6wPIqQ37.woff') format('truetype');
+}
+@font-face {
+    font-family: 'Thin';
+    src: url('../font/cniIIYIKf8EY.woff') format('truetype');
+}
+.header {
+    width: 100%;
+    padding-top: 1.05rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+}
+
+.header .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 87.5rem;
+    width: 100%;
+    margin-left: 4.375rem;
+    margin-right: 3.75rem;
+}
+
+.header .nav ul {
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.header .nav .ul1 li a {
+    position: relative;
+    display: inline-block;
+    margin-right: 1.25rem;
+    padding: 0.5rem 0.75rem;
+    z-index: 1000;
+}
+
+.header .nav .ul1 {
+    margin-right: 4.375rem;
+}
+
+.header .nav .ul2 li a {
+    width: 4.8375rem;
+    position: relative;
+    display: inline-block;
+    margin-right: 1.25rem;
+    padding: 0.5rem 0.75rem;
+    z-index: 1000;
+    color: black;
+}
+
+.header .nav .ul1 li a::after {
+    content: "";
+    width: 0;
+    height: 0.125rem;
+    position: absolute;
+    bottom: 0;
+    background-color: #FF3344;
+    left: 0;
+    transition: width 0.7s;
+}
+
+.header .nav li a:hover::after {
+    width: 100%;
+}
+
+.kk {
+    color: #FAFAFA;
+    background-color: #1570EF;
+    border-radius: 2.5rem;
+}
+  .header .nav i {
+      width: 9.125rem;
+      height: 3.25rem;
+      background: url('../image/logo.png') no-repeat center / contain; 
+  }
+  .box8 {
+    height: 15rem;
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+}
+
+.box8logo {
+    width: 17.5rem;
+    height: 4.375rem;
+    background-image: url("../image/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 1.5rem;
+    left: 8.125rem;
+}
+
+.box8dh {
+    width: 8.625rem;
+    height: 8.625rem;
+    position: absolute;
+    top: 4.3125rem;
+    left: 10rem;
+}
+
+.box8lj {
+    position: absolute;
+    width: 31.25rem;
+    height: 11.25rem;
+    display: flex;
+    right: 13.75rem;
+    top: 1.5rem;
+    justify-content: space-between;
+    font-size: 1.375rem;
+}
+
+.box8lj dl dd {
+    margin-top: 1.25rem;
+    font-size: 1.125rem;
+}
+.box2{
+    background-color: rgb(244 247 250 );
+    height: 44rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image:url("../image/shape-12.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+.box2 .p1{
+    position: absolute;
+    font-family: "Alimama";
+    font-size: 2.25rem;
+    top: 2.8125rem;
+}
+.box2left{
+    height: 33.25rem;
+    width: 21.25rem;
+    background-color: #FFF;
+    margin-top: 2.8125rem;
+    border-radius: 0.9375rem;
+    position: relative;
+}
+.box2right{
+    height: 29.5rem;
+    width: 31.125rem;
+    background-color: #FFF;
+    margin-top: 2.8125rem;
+    margin-left: 2.5rem;
+    border-radius: 0.9375rem;
+    z-index: 2;
+    padding: 1.875rem;
+}
+.img1{
+    position: absolute;
+    top:5.525rem;
+    width: 3.75rem;
+    height: 1.875rem;
+    left: 57.5rem;
+    z-index: 99;
+}
+.img2{
+    position: absolute;
+    width: 2.275rem;
+    height: 3rem;
+    top: 36.5125rem;
+    left: 32.925rem;
+    z-index: 100;
+}
+.img3{
+    position: absolute;
+    z-index: 1;
+    width: 6rem;
+    height: 3.5rem;
+    top: 37.5125rem;
+    left: 67.75rem;
+}
+.box2left ul li{
+    padding-left: 2.5rem;
+    margin-top: 2.5rem;
+}
+.box2left ul li p {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.box2left ul li span{
+    margin-top: 0.625rem;
+    display: block;
+    color: #79808a;
+}
+.box2left i{
+    position: absolute;
+    width: 17.5rem;
+    height: 0.125rem;
+    top: 21.625rem;
+    left: 50%;
+    transform: translate(-50%,0);
+    background-color: #79808a;
+}
+.box2leftdibu{
+    position: absolute;
+    width: 16.5rem;
+    left: 50%;
+    transform: translate(-50%,0);
+    height: 7.5rem;
+    top: 22.8rem;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+}
+.box2leftdibu ul li{
+   float: left;
+}
+.box2leftdibu ul li a{
+    display: inline-block;
+    width: 1.5625rem;
+    height: 1.5625rem;
+    background-size: cover;
+}
+.box2leftdibu p:first-child{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.box2right p{
+    font-size: 1.2rem;
+    color: #70808A;
+}
+.box2right input{
+    width: 13.375rem;
+    height: 2.375rem;
+    border-radius: 0.625rem;
+    margin-top: 0.3125rem;
+    border: 0.0625rem solid #E4E7Ec;
+    text-indent: 1em;
+    box-shadow: 0 0 5px rgba(102, 153, 255, 0.4);
+}
+.box2right input:focus{
+    outline: none;
+    border: 1px solid #1570EF;
+    
+}
+.box2right form{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.box2right form textarea{
+    margin-top: 1.25rem;
+    width: 29.4375rem;
+    height: 12.5rem;
+    padding: 0.625rem;
+    font-size: 1rem;
+    border-radius: 0.625rem;
+    border: solid 1px #E4E7Ec;
+    resize: none; 
+    outline: none;
+    box-shadow: 0 0 5px rgba(102, 153, 255, 0.4);
+}
+  textarea:hover,
+  textarea:focus {
+    border: 1px solid #1570EF;
+  }
+  .box2right form button{
+    justify-self: center;
+    background-color: black;
+    border-radius: 0.625rem;
+    color: #FFF;
+    width: 20rem;
+    height: 2.8125rem;
+    border: 0;
+    margin-left: 5.125rem;
+    margin-top: 2.25rem;
+  }
+

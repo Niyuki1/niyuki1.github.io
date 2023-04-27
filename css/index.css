@@ -1,0 +1,998 @@
+/* 把所有标签内外边距清零 */
+* {
+    margin: 0;
+    padding: 0
+}
+
+/* 斜体的文字不倾斜 */
+em,
+i {
+    font-style: normal
+}
+
+/* 去掉li小圆点 */
+li {
+    list-style: none
+}
+
+img {
+    /* border: 0照顾低版本浏览器，如果图片外面包含了链接会有边框问题     */
+    border: 0;
+    /* 取消图片底侧有空白间隙的问题 */
+    vertical-align: middle
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    /* 抗锯齿 */
+    -webkit-font-smoothing: antialiased;
+    max-width: 87.5rem;
+    margin: 0 auto;
+}
+
+@media screen {}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* 清除浮动 */
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0
+}
+
+.clearfix {
+    *zoom: 1
+}
+
+@font-face {
+    font-family: 'Alimama';
+    src: url('../font/AlimamaShuHeiTi-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Regular';
+    src: url('../font/cb3W6wPIqQ37.woff') format('truetype');
+}
+
+@font-face {
+    font-family: 'Thin';
+    src: url('../font/cniIIYIKf8EY.woff') format('truetype');
+}
+
+.header {
+    width: 100%;
+    padding-top: 1.05rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+}
+
+.header .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 87.5rem;
+    width: 100%;
+    margin-left: 4.375rem;
+    margin-right: 3.75rem;
+}
+
+.header .nav ul {
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.header .nav .ul1 li a {
+    position: relative;
+    display: inline-block;
+    margin-right: 1.25rem;
+    padding: 0.5rem 0.75rem;
+    z-index: 1000;
+}
+
+.header .nav .ul1 {
+    margin-right: 4.375rem;
+}
+
+.header .nav .ul2 li a {
+    width: 4.8375rem;
+    position: relative;
+    display: inline-block;
+    margin-right: 1.25rem;
+    padding: 0.5rem 0.75rem;
+    z-index: 1000;
+    color: #FFF;
+}
+
+.header .nav .ul1 li a::after {
+    content: "";
+    width: 0;
+    height: 0.125rem;
+    position: absolute;
+    bottom: 0;
+    background-color: #FF3344;
+    left: 0;
+    transition: width 0.7s;
+}
+
+.header .nav li a:hover::after {
+    width: 100%;
+}
+
+.kk {
+    color: #FAFAFA;
+    background-color: #FFFFFF26;
+    border-radius: 2.5rem;
+}
+
+.header .nav i {
+    width: 9.125rem;
+    height: 3.25rem;
+    background: url('../image/logo.png') no-repeat center / contain;
+}
+
+.box1 {
+    width: 100%;
+    height: 32.875rem;
+    position: relative;
+    overflow: hidden;
+    max-width: 87.5rem;
+    background-color: #FFF;
+}
+
+.box1 .img1 {
+    position: absolute;
+    background: url(../image/shape-04.png);
+    width: 36.375rem;
+    height: 32.5625rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: -10px;
+    right: 0;
+}
+
+.box1 .img2 {
+    position: absolute;
+    width: 23.75rem;
+    height: 23.75rem;
+    right: 12.875rem;
+}
+
+.box1 .img3 {
+    position: relative;
+    left: 49.25rem;
+    top: 11rem;
+    width: 5.6875rem;
+    height: 5.6875rem;
+}
+
+.box1 .img4 {
+    position: relative;
+    left: 71.75rem;
+    top: 23.125rem;
+    width: 3.5rem;
+    height: 3.5rem;
+}
+.box1 .img5{
+    position: relative;
+    right: -46.875rem;
+    top: 20.875rem;
+    width: 4.625rem;
+    height: 2.5rem;
+}
+
+.box1 p {
+    position: absolute;
+    font-size: 2.625rem;
+    font-family: Alimama;
+    top: 12.75rem;
+    left: 7.1875rem;
+    color: #2F2F2F;
+}
+
+.box1 p span {
+    color: #1968FC;
+}
+
+.box1 .button1 {
+    position: absolute;
+    left: 7rem;
+    top: 22.125rem;
+    width: 8.75rem;
+    height: 3rem;
+    border-radius: 0.9375rem;
+    background-color: #1968FC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.25rem;
+    color: white;
+    transition: width 0.7s;
+}
+
+.box1 .button1:hover {
+    width: 11.25rem;
+    cursor: pointer;
+}
+
+.box1 .sjx {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background: url(../image/箭头-copy.png);
+    background-size: contain;
+}
+
+.box1 .fx {
+    display: flex;
+    position: absolute;
+    left: 6.125rem;
+    bottom: 3.95rem;
+}
+
+.box1 .fx i {
+    margin: 0 1.25rem;
+    display: block;
+    width: 1.375rem;
+    height: 1.375rem;
+    background-size: contain;
+}
+
+.box2 {
+    padding-top: 1.125rem;
+    position: relative;
+    width: 87.5rem;
+    height: 12.625rem;
+    max-width: 87.5rem;
+    background-color: #ecf0f5;
+    text-align: center;
+    background-image: url("../image/shape-15.png");
+    background-size: contain;
+}
+
+.box2 p:first-child {
+    font-family: 'Regular';
+    font-size: 2.5rem;
+}
+
+.box2 .box2-Img0,
+.box2 .box2-Img1,
+.box2 .box2-Img2 {
+    position: absolute;
+    margin-top: 1.75rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.box2 .active2 {
+    visibility: visible !important;
+}
+
+.box2 .box2-Img0 i,
+.box2 .box2-Img1 i,
+.box2 .box2-Img2 i {
+    margin: 0 5rem;
+    display: block;
+    width: 8rem;
+    height: 4.375rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.box2 ul {
+    position: absolute;
+    height: 1.875rem;
+    width: 7.5rem;
+    bottom: 0.625rem;
+    left: 50%;
+    margin-left: -3.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box2 ul li {
+    background-color: #7C7C7C;
+    border-radius: 50%;
+    width: 0.625rem;
+    height: 0.625rem;
+    opacity: 0.4;
+}
+
+.box2 ul li.active {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background-color: #1968FC;
+    opacity: 1;
+}
+
+.box3 {
+    padding-top: 0.625rem;
+    position: relative;
+    width: 100%;
+    height: 58.125rem;
+    max-width: 87.5rem;
+    text-align: center;
+    background-color: #FFF;
+}
+
+.box3 .h {
+    position: absolute;
+    font-family: 'Regular';
+    font-size: 2.5rem;
+    margin: 0 auto;
+    left: 50%;
+    margin-left: -14.9375rem;
+}
+
+.box3 p {
+    font-family: "Thin";
+    font-size: 1rem;
+    position: absolute;
+    top: 4.0625rem;
+    left: 50%;
+    margin-left: -10.5rem;
+}
+
+.box3d1 {
+    position: relative;
+    width: 75rem;
+    height: 25rem;
+    background-color: #EBECED;
+    /* 使用 RGBA 颜色值 */
+    border-radius: 4.375rem;
+    left: 50%;
+    margin-left: -37.5rem;
+    top: 6.25rem;
+    display: flex;
+    justify-content: center;
+}
+
+.box3 .box3bb {
+    width: 18.75rem;
+    height: 19.75rem;
+    margin: 1.875rem 2.125rem;
+    background-color: #FFF;
+    border-radius: 1.25rem;
+    padding-top: 1.875rem;
+    position: relative;
+}
+.box3bb i{
+    position: absolute;
+    width: 4.375rem;
+    height: 4.375rem;
+    border-radius: 50%;
+    left: 1.875rem;
+}
+.box3bb2 i{
+    top: 1.875rem;
+    position: absolute;
+    width: 4.375rem;
+    height: 4.375rem;
+    border-radius: 50%;
+    left: 1.875rem;
+}
+.box3d1 .box3bb em{
+    font-size: 1.875rem;
+    font-weight: 700;
+    text-align: left;
+    position: absolute;
+    top: 8.4375rem;
+    left: 1.875rem;
+}
+.boxz3{
+    font-size: 1rem;
+    display: block;
+    width: 15.125rem;
+    text-align: left;
+    color: #79808a;
+    position: absolute;
+    top: 12.5rem;
+    left: 1.875rem;
+}
+.box3d2 {
+    position: relative;
+    width: 50rem;
+    height: 25rem;
+    left: 50%;
+    top: 6.25rem;
+    margin-left: -25rem;
+    display: flex;
+    justify-content: center;
+}
+
+.box3bbb {
+    width: 24.375rem;
+    height: 24.375rem;
+    margin: 1.25rem 1.125rem;
+    border-radius: 4.375rem;
+    background-color: #EBECED;
+}
+
+.box3bb2 {
+    width: 18.75rem;
+    height: 21.25rem;
+    background-color: #FFF;
+    margin: 1.6875rem auto;
+    border-radius: 1.25rem;
+    position: relative;
+}
+.box3bb2 .t1{
+   position:absolute;
+   display: block;
+   width: 4.375rem;
+   height: 4.375rem;
+   border-radius: 50%;
+   color: #FFF;
+   text-align: center;
+   line-height:4.375rem;
+   font-size: 24px;
+   top: 1.875rem;
+   left: 1.875rem;
+   background-color: #F00438
+}
+.box3bb2 em{
+   font-size: 1.875rem;
+    font-weight: 700;
+    text-align: left;
+    position: absolute;
+    top: 8.4375rem;
+    left: 1.875rem; 
+}
+.box3bb2:hover {
+    border: 0.125rem solid #717CFF;
+}
+
+.box3bb:hover {
+    border: 0.125rem solid #717CFF;
+}
+
+.box4 {
+    position: relative;
+    width: 87.5rem;
+    max-width: 87.5rem;
+    background-color: #ecf0f5;
+    background-image: url("../image/shape-15.png");
+    height: 17.5rem;
+    display: flex;
+    align-items: center;
+}
+.box4img1{
+    position: absolute;
+    top: 0rem;
+    left: 30.175rem;
+    width: 4.25rem;
+    height: 4.125rem;
+}
+.box4img2{
+    position: absolute;
+    top: 2.5rem;
+    right:2.5rem;
+    width: 6.25rem;
+    height: 3.125rem;
+    transform: rotate(90deg);
+}
+.box4img3{
+    position: absolute;
+    bottom: -1rem;
+    left: 2.375rem;
+    width: 3.75rem;
+    height: 3.125rem;
+    animation: spin 3s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% {transform: rotate(360deg); }
+ }
+.box4-flex {
+    position: absolute;
+    height: 8.125rem;
+    width: 58.75rem;
+    left: 50%;
+    margin-left: -29.375rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box4-box {
+    height: 10.125rem;
+    width: 8.125rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.box4-box p{
+    margin-top: 0.75rem;
+    font-family: "Alimama";
+    font-size: 2rem;
+    color: #181c31;
+}
+.box4-box span{
+    color: #79808a;
+}
+.box5 {
+    width: 87.5rem;
+    height: 42.5rem;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 1.5625rem;
+}
+
+.box5 .big {
+    font-family: "Regular";
+    font-size: 2.375rem;
+}
+
+.box5flex {
+    /* 移动一个盒子320px */
+    left: 18.75rem;
+    display: flex;
+    position: absolute;
+    height: 23.75rem;
+    width: 112.5rem;
+    top: 50%;
+    margin-top: -13.125rem;
+    overflow-x: hidden;
+    justify-content: center;
+    transition: all 0.5s;
+}
+
+.box5ls {
+    width: 18.75rem;
+    height: 23.75rem;
+    background-color: #f2f6fc;
+    margin-right: 4.375rem;
+    box-shadow: 0 0 10px 3px #D1E9FF;
+}
+
+.box5 .box5buttonbj {
+    width: 8.75rem;
+    height: 2.5rem;
+    position: absolute;
+    bottom: 6.875rem;
+    right: 7.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box5 .leftbutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: #3B49E3;
+}
+
+.box5 .leftbutton img {
+    width: 1.875rem;
+    height: 1.875rem;
+}
+
+.box5 .rightbutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: #3B49E3;
+    transition: all 0.5s;
+}
+
+.box5 .rightbutton img {
+    width: 1.875rem;
+    height: 1.875rem;
+}
+
+.box5bigbutton {
+    width: 12.5rem;
+    height: 2.5rem;
+    border-radius: 0.9375rem;
+    text-align: center;
+    background-color: #1570EF;
+    color: #FFF;
+    font-size: 1.625rem;
+    line-height: 2.5rem;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 1.25rem;
+    cursor: pointer;
+}
+
+.box5hx {
+    position: absolute;
+    width: 35rem;
+    height: 0.5rem;
+    background-color: #7C7C7C;
+    border-radius: 1.875rem;
+    bottom: 6.875rem;
+    left: 5rem;
+}
+.box5ls i{
+    width: 100%;
+    height: 16.5rem;
+    background-color: #214BF7;
+    background-image: url("../image/人物2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+}
+.box5lszi{
+    width: 100%;
+    height: 7.25rem;
+    background-color: #2F2F2F;
+    position: relative;
+}
+
+.box5lszi span {
+    text-indent: 2em;
+    position: absolute;
+    top: 1.25rem;
+    color: #FFF;
+    text-align: left;
+    width: 90%;
+    left: 5%;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+
+.box5hx p {
+    width: 17.5rem;
+    height: 0.5rem;
+    border-radius: 1.875rem;
+    background-color: #FF3344;
+    transition: all 0.7s;
+}
+
+.box6 {
+    padding-top: 0.625rem;
+    width: 87.5rem;
+    height: 36.125rem;
+    text-align: center;
+    position: relative;
+}
+.box6 .box6bg1{
+    padding-top: 1.125rem;
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 17.5rem;
+    background-color: #2e90fa;
+    background-image: url("../image/shape-15.png");
+    z-index: 0;
+}
+.box6 .box6bg1 p:first-child{
+    font-size: 2.5rem;
+    font-family: "Regular";
+}
+
+.box6 .box6flex {
+    position: absolute;
+    top: 8.75rem;
+    left: 50%;
+    width: 75rem;
+    height: 21.25rem;
+    transform: translate(-50%, 0);
+    display: flex;
+    justify-content: center;
+}
+
+.box6flexbj {
+    position: relative;
+    width: 30rem;
+    height: 21.25rem;
+    flex: 1;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    transition: all 1.5s;
+    outline: 0.125rem solid #84c4ff;
+    flex-shrink: 0;
+}
+.box6flex .box6i{
+    position: absolute;
+    display: block;
+    width: 3.875rem;
+    height: 0.3125rem;
+    background-color: #32D583;
+    top: 5rem;
+    left: 1.875rem;
+}
+.box6flex .box6p{
+    position: absolute;
+    font-size: 1.875rem;
+    font-weight: 600;
+    left: 1.875rem;
+    top: 1.875rem;
+}
+.box6flex .box6p2{
+    position: absolute;
+    font-size: 0.875rem;
+    left: 1.875rem;
+    top: 5.775rem;
+    color: #98a2b3;
+}
+.box6flexbj span {
+    width: 15rem;
+    height: 21.25rem;
+    flex-shrink: 0
+}
+
+.box6flexbjbs {
+    flex: 2;
+}
+.box6flexright {
+    position: absolute;
+    width: 50%;
+    height: 21.25rem;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.7s;
+}
+.box6flexright1 ul{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+}
+.box6flexright1 li{
+    line-height: 3.725rem;
+    margin-top: 4.9375rem;
+    font-size: 1.2rem;
+    width: 11.6875rem;
+    height: 3.725rem;
+    border: 1px solid #1968FC;
+    border-radius: 0.9375rem;
+}
+.box6flexkz{
+    opacity:1
+}
+.box7 {
+    width: 75rem;
+    height: 36.25rem;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+.box7 .h {
+    font-family: "Regular";
+    font-size: 2.375rem;
+}
+
+.box7flex {
+    width: 100%;
+    height: 25rem;
+    border: 0.125rem solid #2E90FA;
+    background-color: #FFF;
+    border-radius: 1.875rem;
+    margin-top: 1.625rem;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.box7zi2 {
+    width: 43.75rem;
+    height: 25rem;
+    border-left: 2px solid #2E90FA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box7zi2 h4 {
+    margin-top: 1.25rem;
+    font-size: 2rem;
+}
+
+.box7zi1 {
+    padding-top: 1.25rem;
+    width: 31.25rem;
+    height: 20.625rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box7zi1zi {
+    width: 100%;
+    margin-bottom: 0.9375rem;
+}
+
+.box7zi1zi:first-child {
+    flex: 2;
+}
+
+.box7zi1 ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box7zi1 ul li {
+    margin-left: 1.25rem;
+    line-height: 2.8125rem;
+    width: 5rem;
+    height: 2.8125rem;
+    background-color: #f7fbff;
+    margin-top: 0.625rem;
+    border-radius: 0.625rem;
+    border: 0.0625rem solid #d5ecff;
+    cursor: pointer;
+}
+
+.box7zi1 .ul1 li:nth-child(5) {
+    margin-left: 8.75rem;
+}
+
+.box7zi1 ul li:first-child {
+    width: 6.25rem;
+    height: 2.8125rem;
+    background-color: #157CE9;
+    border-radius: 0.625rem;
+    line-height: 2.8125rem;
+    color: #FFF;
+}
+
+.box7zi2 span {
+    margin-top: 1.25rem;
+    width: 40.625rem;
+    height: 6.25rem;
+    border: 2px solid #2E90FA;
+    border-radius: 0.9375rem;
+    position: relative;
+}
+
+.box7zi2 i {
+    position: absolute;
+    width: 5rem;
+    height: 2.5rem;
+    bottom: 0.625rem;
+    right: 1.25rem;
+    background-color: #1570ef;
+    color: #FFF;
+    line-height: 2.5rem;
+    border-radius: 0.625rem;
+}
+
+.box7zi2 span p {
+    position: absolute;
+    left: 1.875rem;
+    font-size: 1.375rem;
+    margin-top: 1.25rem;
+}
+
+.bo7zi2img {
+    width: 38.75rem;
+    height: 11.25rem;
+    margin-top: 1.25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.box7img {
+    width: 18.75rem;
+    height: 11.25rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.box8 {
+    height: 18rem;
+    width: 100%;
+    background-color: rgb(255,255,255);
+    position: relative;
+}
+
+.box8logo {
+    width: 17.5rem;
+    height: 4.375rem;
+    background-image: url("../image/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 3.5rem;
+    left: 8.125rem;
+}
+
+.box8dh {
+    width: 8.625rem;
+    height: 8.625rem;
+    position: absolute;
+    top: 7.3125rem;
+    left: 10rem;
+}
+
+.box8lj {
+    position: absolute;
+    width: 31.25rem;
+    height: 11.25rem;
+    display: flex;
+    right: 13.75rem;
+    top: 3.5rem;
+    justify-content: space-between;
+    font-size: 1.375rem;
+}
+
+.box8lj dl dd {
+    margin-top: 1.25rem;
+    font-size: 1.125rem;
+}
+.box9{
+    height: 21.875rem;
+    width: 87.5rem;
+    background-color: #1968FC;
+    position: relative;
+}
+.box9 img{
+    width: 26.875rem;
+    height: 21.25rem;
+    position: absolute;
+    right: 1.5rem;
+    top: 0.3125rem;
+}
+.box9 p{
+    color: #FFFFFF;
+    font-family: "黑体";
+    font-weight: 500;
+    font-size: 2.125rem;
+    position: absolute;
+    top: 60px;
+    left: 6.25rem;
+    letter-spacing: 0.1em;
+}
+.box9 i{
+    position: absolute;
+    top: 8.5rem;
+    display: block;
+    width: 4rem;
+    height: 0.1875rem;
+    background-color: #FFFFFF;
+    left: 6.25rem;
+}
+.box9 span{
+    color: #FFFFFF;
+    font-size: 1.0625rem;
+    position: absolute;
+    top: 11.375rem;
+    left: 6.25rem;
+    letter-spacing: 0.1em;
+}
+.box9 button{
+    height: 3.125rem;
+    width: 11.25rem;
+    background-color:#FFFFFF;
+    color: #1968FC;
+    border: transparent;
+    position: absolute;
+    top: 15.1875rem;
+    left: 6rem;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+}

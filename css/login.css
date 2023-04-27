@@ -1,0 +1,265 @@
+/* 把所有标签内外边距清零 */
+* {
+    margin: 0;
+    padding: 0
+}
+/* 斜体的文字不倾斜 */
+em,
+i {
+    font-style: normal
+}
+/* 去掉li小圆点 */
+li {
+    list-style: none
+}
+img {
+    /* border: 0照顾低版本浏览器，如果图片外面包含了链接会有边框问题     */
+    border: 0;
+    /* 取消图片底侧有空白间隙的问题 */
+    vertical-align: middle
+}
+html{
+    font-size: 16px;
+}
+body {
+    /* 抗锯齿 */
+    -webkit-font-smoothing: antialiased;
+    background-color: #eeeeee;
+    margin: 0 auto;
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+/* 清除浮动 */
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0
+}
+.clearfix {
+    *zoom: 1
+}
+@font-face {
+    font-family: 'Alimama';
+    src: url('../font/AlimamaShuHeiTi-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Regular';
+    src: url('../font/cb3W6wPIqQ37.woff') format('truetype');
+}
+@font-face {
+    font-family: 'Thin';
+    src: url('../font/cniIIYIKf8EY.woff') format('truetype');
+}
+.header {
+    width: 100%;
+    padding-top: 1.05rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+}
+
+.header .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 87.5rem;
+    width: 100%;
+    margin-left: 4.375rem;
+    margin-right: 3.75rem;
+}
+
+.header .nav ul {
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.header .nav .ul1 li a {
+    position: relative;
+    display: inline-block;
+    margin-right: 1.25rem;
+    padding: 0.5rem 0.75rem;
+    z-index: 1000;
+}
+
+.header .nav .ul1 {
+    margin-right: 4.375rem;
+}
+
+.header .nav .ul2 li a {
+    width: 4.8375rem;
+    position: relative;
+    display: inline-block;
+    margin-right: 1.25rem;
+    padding: 0.5rem 0.75rem;
+    z-index: 1000;
+    color: black;
+}
+
+.header .nav .ul1 li a::after {
+    content: "";
+    width: 0;
+    height: 0.125rem;
+    position: absolute;
+    bottom: 0;
+    background-color: #FF3344;
+    left: 0;
+    transition: width 0.7s;
+}
+
+.header .nav li a:hover::after {
+    width: 100%;
+}
+
+.kk {
+    color: #FAFAFA;
+    background-color: #1570EF;
+    border-radius: 2.5rem;
+}
+  .header .nav i {
+      width: 9.125rem;
+      height: 3.25rem;
+      background: url('../image/logo.png') no-repeat center / contain; 
+  }
+  .box8 {
+    height: 15rem;
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+}
+
+.box8logo {
+    width: 17.5rem;
+    height: 4.375rem;
+    background-image: url("../image/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 1.5rem;
+    left: 8.125rem;
+}
+
+.box8dh {
+    width: 8.625rem;
+    height: 8.625rem;
+    position: absolute;
+    top: 4.3125rem;
+    left: 10rem;
+}
+
+.box8lj {
+    position: absolute;
+    width: 31.25rem;
+    height: 11.25rem;
+    display: flex;
+    right: 13.75rem;
+    top: 1.5rem;
+    justify-content: space-between;
+    font-size: 1.375rem;
+}
+
+.box8lj dl dd {
+    margin-top: 1.25rem;
+    font-size: 1.125rem;
+}
+.box2{
+    background-color: rgb(244,247,250 );
+    height: 44rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box2kj{
+    width: 68.75rem;
+    height: 37.5rem;
+    border-radius: 2.5rem;
+    background-color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box2kjRight{
+    height: 33.75rem;
+    width: 31.25rem;
+    background-color: #E3F7FF;
+    border-radius: 2.5rem;
+    justify-self: flex-end;
+    margin-left: 2.5rem;
+    text-align: center;
+}
+.box2kjLeft{
+    height: 26.25rem;
+    width: 23.125rem;
+    margin-left: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.box2kjLeft i {
+    width: 8.125rem;
+    height: 2.5rem;
+    background-image: url("../image/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+.box2kjLeft span{
+    font-size: 2.5rem;
+    font-family: "Regular";
+    font-weight: 700;
+    margin-top: 2.375rem;
+}
+.box2kjLeft input{
+    width: 20rem;
+    height: 2.5rem;
+    border: 0;
+    margin-top: 1.875rem;
+    line-height: 2.5rem;
+    font-size: 1rem;
+    border-bottom: 0.0625rem solid #ccc;
+}
+.box2kjLeft input:focus{
+    outline: none;
+    border-bottom: 0.125rem solid black;
+}
+.box2kjLeft form{
+    margin-top: 2.5rem;
+    justify-self: flex-end;
+}
+.box2kjLeft form .submit{
+    margin-top: 1.875rem;
+    background-color: black;
+    border-radius: 0.625rem;
+    color: #FFF;
+    width: 20rem;
+    height: 2.8125rem;
+    border: 0;
+}
+.box2kjRight i{
+    display: block;
+    width: 31.25rem;
+    height: 25rem;
+    background-image: url("../image/01.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 2.5rem;
+    margin-top: 1.5rem;
+}
+.box2kjRight p{
+    margin-top: 1.75rem;
+    font-family: "Regular";
+    font-weight: 600;
+    font-size: 1.525rem;
+}
